@@ -4,6 +4,7 @@
     "module": "ESNext",
     "outDir": "build",
     "rootDir": "src",
+    "baseUrl": ".",
     "strict": true,
     "moduleResolution": "Node",
     "allowSyntheticDefaultImports": true,
@@ -12,7 +13,19 @@
     "emitDecoratorMetadata": false,
 
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+
+    "paths": {
+      "$lib/*": ["src/lib/*"],
+      "$helpers/*": ["src/lib/helpers/*"],
+      "$structures/*": ["src/lib/structures/*"],
+
+      "$types/*": ["src/types/*"],
+      "$commands/*": ["src/commands/*"],
+      "$events/*": ["src/events/*"],
+
+      "$/*": ["*"],
+    },
   },
-  "exclude": ["build", "node_modules"]
+  "exclude": ["build", "node_modules"],
 }
